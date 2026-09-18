@@ -38,7 +38,7 @@ export default function AnalyzerExperience() {
     if (!imageFile) return;
     setIsAnalyzing(true);
     try {
-      const analysis = await analyzeItem(details);
+      const analysis = await analyzeItem(imageFile, details);
       setResult(analysis);
     } finally {
       setIsAnalyzing(false);
